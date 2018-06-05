@@ -1,0 +1,8 @@
+{	
+	"label":"Manuals",
+   	"description":"Lifecycle manual page",
+   	"version":"0.1.0",
+  	"apiDependency":"v2",
+	"uri":"manuals",
+	"includeMenuAndFooter": true
+}
