@@ -1,0 +1,1 @@
+# molgenis-app-lifecycle-manuals
