@@ -13,8 +13,11 @@
             <h2>LifeCycle manuals</h2>
             <ul class="list-group" style="margin:2em;">
                 <li class="list-group-item"><a href="#upload_core_variables">Add core variables to catalogue</a></li>
-                <li class="list-group-item"><a href="#add_update_source_variables_molgenis">Add source variables to cohort (in
+                <li class="list-group-item"><a href="#add_update_source_variables_molgenis">Add source variables to
+                    cohort (in
                     dataexplorer)</a></li>
+                <li class="list-group-item"><a href="#upload_source_variables">Upload source variables to cohort
+                    (uploading excel file)</a></li>
             </ul>
         </div>
     </div>
@@ -179,6 +182,148 @@
                                 IMPORTANT: Do not click in the grey area outside the modal, this causes your pop up to
                                 close.
                             </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 mt-3">
+                        <div class="card-body">
+                            Your variable is now added/updated. Nightly a mapping will be applied which will put your
+                            updated variable in the main source variable table, this means your variable will not
+                            instantly be updated in the main table.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="upload_source_variables">
+            <h3>How to upload source variables to cohort</h3>
+            <div class="row">
+                <div class=" col-12">
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 1
+                        </div>
+                        <div class="card-body">
+                            Create an excel file with as tabname: LifeCycle_*here your cohort name*_SourceVariables.
+                            <div class="alert alert-warning" role="alert">
+                                Please note the casing, L, C, S and V are capitals.
+                            </div>
+                            Use the following format for your table:
+                            <br/><br/>
+                            <table class="table table-sm">
+                                <thead>
+                                <th>cohort</th>
+                                <th>variable</th>
+                                <th>datatype</th>
+                                <th>values</th>
+                                <th>unit</th>
+                                <th>collectionType</th>
+                                <th>description</th>
+                                <th>dateOfUpdate</th>
+                                <th>dependencies</th>
+                                </thead>
+                                <tbody>
+                                <td>The identifier of the cohort</td>
+                                <td>The name of the variable</td>
+                                <td>The type of the value, choose from Choose from <a
+                                        href="/menu/main/dataexplorer?entity=LifeCycle_DataTypes&hideselect=true"
+                                        target="_blank">these</a></td>
+                                <td>The possible values for the variable</td>
+                                <td>Which unit is the variable in? Choose from <a
+                                        href="/menu/main/dataexplorer?entity=LifeCycle_Units&hideselect=true"
+                                        target="_blank">these</a></td>
+                                <td>How was the information collected?</td>
+                                <td>Describe of the variable</td>
+                                <td>Date that the variable was last updated for harmonization</td>
+                                <td>Description of dependencies of the variable on other variables</td>
+                                </tbody>
+                            </table>
+                            <br/>
+                            <img style="width:60%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/sv_upload_step1.png"
+                                 alt="Screenshot"/>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 2
+                        </div>
+                        <div class="card-body">
+                            Fill the file with your data.
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 3
+                        </div>
+                        <div class="card-body">
+                            Go to the <a href="/menu/main/importwizard" target="_blank">importer</a>.
+                            <img style="width:70%;min-width:35rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/sv_upload_step3.png"
+                                 alt="Screenshot"/>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 4
+                        </div>
+                        <div class="card-body">
+                            Click on "Select a file..." and select your file. Then click the next button on the bottom
+                            right.<br/><br/>
+                            <h5>Possible errors</h5>
+                            <img style="width:40%;min-width:15rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/sv_upload_step4.png"
+                                 alt="Screenshot"/>
+                            <p class="font-weight-bold">Solution:</p>
+                            Probably you made a mistake in naming the tab in excel. Note this is case sensitive and
+                            should be in the following format:
+                            LifeCycle_*cohort name*_SourceVariables. Click <a
+                                href="/menu/main/dataexplorer?entity=LifeCycle_Cohorts&hideSelect=true" target="_blank">here</a>
+                            for a list of all possible cohorts. This name is case sensitive as well.
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 4
+                        </div>
+                        <div class="card-body">
+                            Select: <span class="font-weight-bold">Add entities / update existing</span>. Click the next
+                            button on the bottom right again. The package step appears, since you are only uploading
+                            data you can ignore this and press next again. If you provided all columnheaders in your
+                            file, all fields will be green and you can press next again.
+                            <br/><br/>
+                            <h5>Possible errors</h5>
+                            <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/sv_upload_step5a.png"
+                                 alt="Screenshot"/>
+                            <p class="font-weight-bold">Solution:</p>
+                            You provided a date that is not formatted in a molgenis supported date format. Please make
+                            sure you use this format: yyyy-mm-dd.
+                            <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/sv_upload_step5b.png"
+                                 alt="Screenshot"/>
+                            <p class="font-weight-bold">Solution:</p>
+                            Description is a required column. Please provide a description for all rows.
+                            <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/sv_upload_step5c.png"
+                                 alt="Screenshot"/>
+                            <p class="font-weight-bold">Solution:</p>
+                            The cohort name you provided is not a valid cohort name. Please select one from
+                            <a href="/menu/main/dataexplorer?entity=LifeCycle_Cohorts&hideSelect=true" target="_blank">this</a>
+                            list. Again, the data is case sensitive, so make sure all casing is correct. Look at the
+                            "ID" column for this value.
+                            <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/sv_upload_step5d.png"
+                                 alt="Screenshot"/>
+                            <p class="font-weight-bold">Solution:</p>
+                            The datatype name you provided is not a valid datatype name. Please select one from
+                            <a href="/menu/main/dataexplorer?entity=LifeCycle_DataTypes&hideSelect=true"
+                               target="_blank">this</a>
+                            list. Again, the data is case sensitive, so make sure all casing is correct. Look at the
+                            "ID" column for this value.
+
+                            For other errors, please
                         </div>
                     </div>
                     <div class="card mb-3 mt-3">
