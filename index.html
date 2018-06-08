@@ -20,6 +20,7 @@
                     (uploading excel file)</a></li>
                 <li class="list-group-item"><a href="#add_update_harmonizations_molgenis">Add/update harmonizations (in
                     data explorer)</a></li>
+                <li class="list-group-item"><a href="#upload_harmonizations">Upload harmonizations for cohort</a></li>
             </ul>
         </div>
     </div>
@@ -278,11 +279,12 @@
                                  src="img/sv_upload_step4.png"
                                  alt="Screenshot"/>
                             <p class="font-weight-bold">Solution:</p>
-                            Probably you made a mistake in naming the tab in excel. Note this is case sensitive and
+                            <p>Probably you made a mistake in naming the tab in excel. Note this is case sensitive and
                             should be in the following format:
                             LifeCycle_*cohort name*_SourceVariables. Click <a
                                 href="/menu/main/dataexplorer?entity=LifeCycle_Cohorts&hideSelect=true" target="_blank">here</a>
                             for a list of all possible cohorts. This name is case sensitive as well.
+                            </p>
                         </div>
                     </div>
                     <div class="card mt-3">
@@ -300,32 +302,31 @@
                                  src="img/sv_upload_step5a.png"
                                  alt="Screenshot"/>
                             <p class="font-weight-bold">Solution:</p>
-                            You provided a date that is not formatted in a molgenis supported date format. Please make
-                            sure you use this format: yyyy-mm-dd.
+                            <p>You provided a date that is not formatted in a molgenis supported date format. Please
+                                make sure you use this format: yyyy-mm-dd.</p>
                             <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
                                  src="img/sv_upload_step5b.png"
                                  alt="Screenshot"/>
                             <p class="font-weight-bold">Solution:</p>
-                            Description is a required column. Please provide a description for all rows.
+                            <p>Description is a required column. Please provide a description for all rows.</p>
                             <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
                                  src="img/sv_upload_step5c.png"
                                  alt="Screenshot"/>
                             <p class="font-weight-bold">Solution:</p>
-                            The cohort name you provided is not a valid cohort name. Please select one from
+                            <p>The cohort name you provided is not a valid cohort name. Please select one from
                             <a href="/menu/main/dataexplorer?entity=LifeCycle_Cohorts&hideSelect=true" target="_blank">this</a>
                             list. Again, the data is case sensitive, so make sure all casing is correct. Look at the
-                            "ID" column for this value.
+                                "ID" column for this value.</p>
                             <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
                                  src="img/sv_upload_step5d.png"
                                  alt="Screenshot"/>
                             <p class="font-weight-bold">Solution:</p>
-                            The datatype name you provided is not a valid datatype name. Please select one from
+                            <p>The datatype name you provided is not a valid datatype name. Please select one from
                             <a href="/menu/main/dataexplorer?entity=LifeCycle_DataTypes&hideSelect=true"
                                target="_blank">this</a>
                             list. Again, the data is case sensitive, so make sure all casing is correct. Look at the
-                            "ID" column for this value.
-
-                            For other errors, please
+                                "ID" column for this value.</p>
+                            <p>For other errors, please contact us.</p>
                         </div>
                     </div>
                     <div class="card mb-3 mt-3">
@@ -392,6 +393,157 @@
                                 IMPORTANT: Do not click in the grey area outside the modal, this causes your pop up to
                                 close.
                             </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 mt-3">
+                        <div class="card-body">
+                            Your harmonization is now added/updated. Nightly a mapping will be applied which will put
+                            your updated variable in the main harmonizations table, this means your harmonization will
+                            not instantly be updated in the main table.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="upload_harmonizations">
+            <h3>How to upload harmonizations for cohort</h3>
+            <div class="row">
+                <div class=" col-12">
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 1
+                        </div>
+                        <div class="card-body">
+                            The easiest way to retrieve the correct format for the harmonizations table is by going to
+                            your table (we select DNBC again in this example).
+                            <img style="width:20%;min-width:10rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_step1.png"
+                                 alt="Screenshot"/>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 2
+                        </div>
+                        <div class="card-body">
+                            Download your table by pressing the download button on the bottom right of your screen.
+                            <img style="width:70%;min-width:35rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_upload_step2.png"
+                                 alt="Screenshot"/>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 3
+                        </div>
+                        <div class="card-body">
+                            Apply the following settings:
+                            <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_upload_step3.png"
+                                 alt="Screenshot"/>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 4
+                        </div>
+                        <div class="card-body">
+                            Open the file.
+                            <img style="width:70%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_upload_step4.png"
+                                 alt="Screenshot"/>
+                            <br/>
+                            <p>The following columns should be filled in. Please leave the rest empty.</p>
+                            <table class="table table-sm">
+                                <thead>
+                                <th>cohort</th>
+                                <th>sources</th>
+                                <th>target</th>
+                                <th>description</th>
+                                <th>syntax</th>
+                                <th>status</th>
+                                <th>dateOfUpdate</th>
+                                </thead>
+                                <tbody>
+                                <td>The identifier of the cohort</td>
+                                <td>The related source variables from your source variable table</td>
+                                <td>The target <a
+                                        href="/menu/main/dataexplorer?entity=LifeCycle_CoreVariables&hideselect=true"
+                                        target="_blank">core variable</a></td>
+                                <td>Description of the harmonization</td>
+                                <td>Code implementing the harmonization/td>
+                                <td>Choose a status of the harmonization from <a
+                                        href="/menu/main/dataexplorer?entity=LifeCycle_Status&hideselect=true"
+                                        target="_blank">these</a></td>
+                                <td>Date that the harmonization was last updated</td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 5
+                        </div>
+                        <div class="card-body">
+                            Add new rows to the file.
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 6
+                        </div>
+                        <div class="card-body">
+                            Go to the <a href="/menu/main/importwizard" target="_blank">importer</a>.
+                            <img style="width:70%;min-width:35rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/sv_upload_step3.png"
+                                 alt="Screenshot"/>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 7
+                        </div>
+                        <div class="card-body">
+                            Click on "Select a file..." and select your file. Then click the next button on the bottom
+                            right.
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 8
+                        </div>
+                        <div class="card-body">
+                            Select: <span class="font-weight-bold">Add entities / update existing</span>. Click the next
+                            button on the bottom right again. The package step appears, since you are only uploading
+                            data you can ignore this and press next again. id, sourceLabel and targetLabel will be
+                            yellow, since these attributes will be automatically generated.
+                            <br/><br/>
+                            <h5>Possible errors</h5>
+                            <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_upload_step8c.png"
+                                 alt="Screenshot"/>
+                            <p class="font-weight-bold">Solution:</p>
+                            <p>You provided a date that is not formatted in a molgenis supported date format. Please
+                                make sure you use this format: yyyy-mm-dd.</p>
+                            <img style="width:40%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_upload_step8a.png"
+                                 alt="Screenshot"/>
+                            <p class="font-weight-bold">Solution:</p>
+                            <p>Target is a required column. Please provide a description for all rows. This error can
+                                also occur for other required columns.</p>
+                            <img style="width:50%;min-width:25rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_upload_step8b.png"
+                                 alt="Screenshot"/>
+                            <p class="font-weight-bold">Solution:</p>
+                            <p>The cohort name you provided is not a valid cohort name. Please select one from
+                                <a href="/menu/main/dataexplorer?entity=LifeCycle_Cohorts&hideSelect=true"
+                                   target="_blank">this</a>
+                                list. Again, the data is case sensitive, so make sure all casing is correct. Look at the
+                                "ID" column for this value. This error can also occur for the source and target
+                                variables.</p>
+                            <p>For other errors, please contact us.</p>
                         </div>
                     </div>
                     <div class="card mb-3 mt-3">
