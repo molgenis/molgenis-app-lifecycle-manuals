@@ -4,17 +4,19 @@
             <h2>LifeCycle manuals</h2>
             <ul class="list-group" style="margin:2em;">
                 <li class="list-group-item"><a href="#upload_core_variables">Add core variables to catalogue</a></li>
-                <li class="list-group-item"><a href="#add_update_source_variables_molgenis">Add source variables to
+                <li class="list-group-item"><a href="#add_update_source_variables_molgenis">Add source variables for
                     cohort (in
-                    dataexplorer)</a></li>
-                <li class="list-group-item"><a href="#upload_source_variables">Upload source variables to cohort
+                    data explorer)</a></li>
+                <li class="list-group-item"><a href="#upload_source_variables">Upload source variables for cohort
                     (uploading excel file)</a></li>
+                <li class="list-group-item"><a href="#add_update_harmonizations_molgenis">Add/update harmonizations (in
+                    data explorer)</a></li>
             </ul>
         </div>
     </div>
     <div class="row">
         <div class="col-12" id="upload_core_variables">
-            <h3>How to add source variables to cohort</h3>
+            <h3>How to add core variables for cohort</h3>
             <div class="row">
                 <div class=" col-12">
                     <div class="card mt-3">
@@ -124,7 +126,7 @@
     </div>
     <div class="row">
         <div class="col-12" id="add_update_source_variables_molgenis">
-            <h3>How to add/update core variables to the catalogue (in molgenis)</h3>
+            <h3>How to add/update source variables in the catalogue (in data explorer)</h3>
             <div class="row">
                 <div class=" col-12">
                     <div class="card mt-3">
@@ -188,7 +190,7 @@
     </div>
     <div class="row">
         <div class="col-12" id="upload_source_variables">
-            <h3>How to upload source variables to cohort</h3>
+            <h3>How to upload source variables for cohort</h3>
             <div class="row">
                 <div class=" col-12">
                     <div class="card mt-3">
@@ -322,6 +324,72 @@
                             Your variable is now added/updated. Nightly a mapping will be applied which will put your
                             updated variable in the main source variable table, this means your variable will not
                             instantly be updated in the main table.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12" id="add_update_harmonizations_molgenis">
+            <h3>How to add/update harmonization in the catalogue (in data explorer)</h3>
+            <div class="row">
+                <div class=" col-12">
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 1
+                        </div>
+                        <div class="card-body">
+                            Open the haronizations table of your cohort:
+                            <img style="width:20%;min-width:10rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_step1.png"
+                                 alt="Screenshot"/>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary" style="margin-top:1rem;">
+                        In this example the DNBC cohort is selected.
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 2
+                        </div>
+                        <div class="card-body">
+                            Click on the green + sign to add a row and click on the edit button in front of the row.
+                            <img style="width:30%;min-width:10rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_step2.png"
+                                 alt="Screenshot"/>
+                            <br/>
+                            <div class="alert alert-warning" role="alert">
+                                IMPORTANT: Make sure that when using both editing options (excel upload/molgenis edit),
+                                you should alter both, otherwise when updating your changes will become undone.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-primary" style="margin-top:1rem;">
+                        In this example add row is clicked. When clicking "edit row", the form will be filled with
+                        content.
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Step 3
+                        </div>
+                        <div class="card-body">
+                            Now you can fill out the form and click on create.
+                            <img style="width:70%;min-width:40rem;" class="mx-auto d-block card-img-bottom"
+                                 src="img/h_step3.png"
+                                 alt="Screenshot"/>
+                            <br/>
+                            <div class="alert alert-warning" role="alert">
+                                IMPORTANT: Do not click in the grey area outside the modal, this causes your pop up to
+                                close.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 mt-3">
+                        <div class="card-body">
+                            Your harmonization is now added/updated. Nightly a mapping will be applied which will put
+                            your updated variable in the main harmonizations table, this means your harmonization will
+                            not instantly be updated in the main table.
                         </div>
                     </div>
                 </div>
