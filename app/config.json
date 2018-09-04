@@ -1,4 +1,5 @@
 {	
+	"name":"manuals",
 	"label":"Manuals",
    	"description":"Lifecycle manual page",
    	"version":"0.1.0",
