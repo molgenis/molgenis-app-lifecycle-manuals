@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "LifeCycle manuals",
   "scripts": {
-    "build": "webpack --progress --hide-modules"
+    "build": "webpack --progress --hide-modules",
     "preversion": "yarn build",
     "postversion": "curl -v --user ${REGISTRY_CRED_USR}:${REGISTRY_CRED_PSW} --upload-file dist/$npm_package_name.zip  https://${REGISTRY}/repository/appstore/$npm_package_name/$npm_package_version/$npm_package_name.zip"
   },
