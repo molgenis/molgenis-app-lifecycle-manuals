@@ -4,6 +4,8 @@
   "description": "LifeCycle manuals",
   "scripts": {
     "build": "webpack --progress --hide-modules"
+    "preversion": "yarn build",
+    "postversion": "curl -v --user ${REGISTRY_CRED_USR}:${REGISTRY_CRED_PSW} --upload-file dist/$npm_package_name.zip  https://${REGISTRY}/repository/appstore/$npm_package_name/$npm_package_version/$npm_package_name.zip"
   },
   "repository": "https://github.com/molgenis/molgenis-app-lifecycle-manuals.git",
   "devDependencies": {
