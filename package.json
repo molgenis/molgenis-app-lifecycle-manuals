@@ -1,6 +1,6 @@
 {
   "name": "molgenis-app-lifecycle-manuals",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "LifeCycle manuals",
   "scripts": {
     "build": "webpack --progress --hide-modules",
