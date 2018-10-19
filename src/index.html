@@ -111,9 +111,9 @@
                             Use the following format for your table:
                             <br/><br/>
                             <table class="table table-sm">
-                                <thead>
-                                <th>cohort</th>
+                                <thead>                                
                                 <th>variable</th>
+                                <th>label</th>
                                 <th>datatype</th>
                                 <th>values</th>
                                 <th>unit</th>
@@ -123,17 +123,17 @@
                                 <th>dependencies</th>
                                 </thead>
                                 <tbody>
-                                <td>The identifier of the cohort</td>
-                                <td>The name of the variable</td>
+                                <td>The name of the variable, cann't be null</td>
+                                <td>The label of the variable, cann't be null</td>                                
                                 <td>The type of the value, choose from Choose from <a
                                         href="/menu/main/dataexplorer?entity=LifeCycle_DataTypes&hideselect=true"
-                                        target="_blank">these</a></td>
+                                        target="_blank">these</a>, , cann't be null</td>
                                 <td>The possible values for the variable</td>
                                 <td>Which unit is the variable in? Choose from <a
                                         href="/menu/main/dataexplorer?entity=LifeCycle_Units&hideselect=true"
                                         target="_blank">these</a></td>
-                                <td>How was the information collected?</td>
-                                <td>Describe of the variable</td>
+                                <td>How was the information collected, cann't be null</td>
+                                <td>Describe of the variable, cann't be null</td>
                                 <td>Date that the variable was last updated for harmonization</td>
                                 <td>Description of dependencies of the variable on other variables</td>
                                 </tbody>
@@ -365,25 +365,27 @@
                             <p>The following columns should be filled in. Please leave the rest empty.</p>
                             <table class="table table-sm">
                                 <thead>
-                                <th>cohort</th>
-                                <th>sources</th>
                                 <th>target</th>
+                                <th>status</th>
+                                <th>sources</th>                          
                                 <th>description</th>
                                 <th>syntax</th>
-                                <th>status</th>
+                                <th>info</th>
+                                <th>id</th>                                
                                 <th>dateOfUpdate</th>
                                 </thead>
                                 <tbody>
-                                <td>The identifier of the cohort</td>
-                                <td>The related source variables from your source variable table</td>
                                 <td>The target <a
                                         href="/menu/main/dataexplorer?entity=LifeCycle_CoreVariables&hideselect=true"
-                                        target="_blank">LifeCycle variable</a></td>
-                                <td>Description of the harmonization</td>
-                                <td>Code implementing the harmonization/td>
+                                        target="_blank">LifeCycle variable</a>, cann't be null</td>
                                 <td>Choose a status of the harmonization from <a
                                         href="/menu/main/dataexplorer?entity=LifeCycle_Status&hideselect=true"
-                                        target="_blank">these</a></td>
+                                        target="_blank">these</a>, cann't be null</td>                                                                 
+                                <td>The related source variables from your source variable table</td>
+                                <td>Description of the harmonization</td>
+                                <td>Code implementing the harmonization/td>                                
+                                <td>Information text field</td>
+                                <td>Identifier</td>
                                 <td>Date that the harmonization was last updated</td>
                                 </tbody>
                             </table>
